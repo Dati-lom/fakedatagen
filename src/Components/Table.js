@@ -15,7 +15,7 @@ function Table() {
   
   useEffect(()=>{
     faker.seed(seed)
-  },[seed])
+  },[seed,reg])
   
   useEffect(()=>{
     if(users.length > 0){
