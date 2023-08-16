@@ -6,8 +6,6 @@ import FakerContext from '../Context/FakerContext';
 import InfiniteScroll from "react-infinite-scroll-component"
 import CreateError from '../Functions/CreateError';
 
-
-const sampleuser = {id: 'cdfcdcbc9de896d1f58abbba', fName: 'Leila  Wróbel', address: 'al. Komorowski 97c m. 288', phone: '55-784-57-61'}
 function Table() {
   const {seed, setSeed,faker,setFaker} = useContext(FakerContext);
   const [reg, setReg] = useState('PL');
