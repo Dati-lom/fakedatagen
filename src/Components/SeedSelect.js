@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { fakerEN_US, fakerKA_GE, fakerPL } from "@faker-js/faker";
 import FakerContext from '../Context/FakerContext';
 
-function SeedSelect({ setReg, setError, error }) {
+function SeedSelect({ setReg, setError, error}) {
   const { faker, setFaker, seed, setSeed } = useContext(FakerContext);
 
   const handleRandomSeed = () => {
