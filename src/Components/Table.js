@@ -49,6 +49,7 @@ function Table() {
         newUsers.push(GenerateRecord(faker, reg));
     }
     setUsers(users => [...users, ...newUsers]);
+    setVisibleUsers(users => [...users,...newUsers]);
     
 };
 
