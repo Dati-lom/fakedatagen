@@ -16,23 +16,18 @@ function Table() {
   useEffect(()=>{
     faker.seed(seed)
   },[seed])
-
-  useEffect(() => {
-    generateData();
-  }, [seed,reg]);
-
-
+  
   useEffect(()=>{
     if(users.length > 0){
       const newUsers = [...users.map((e)=> CreateError(error,e,faker,reg))]
       setVisibleUsers(newUsers);
-      
     }
     
 },[error,seed])
  
-
-  
+  useEffect(() => {
+    generateData();
+  }, [seed,reg]);
 
 
   const generateData = () => {
