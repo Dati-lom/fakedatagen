@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import {faker} from "@faker-js/faker"
+import { useState } from "react";
 import './App.css';
+import SeedSelect from "./Components/SeedSelect";
+import Table from "./Components/Table";
+import { fakerEN_US, fakerKA_GE, fakerPL } from "@faker-js/faker";
+import FakerContext from "./Context/FakerContext";
 
 function App() {
+  const [seed,setSeed] = useState(0);
+  const [faker,setFaker] = useState(fakerPL);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FakerContext.Provider value={{seed,setSeed,faker,setFaker}}>
+    <Table></Table>
+    </FakerContext.Provider>
   );
 }
 
