@@ -79,7 +79,7 @@ function SeedSelect({ setReg, setError, error }) {
           type="number"
           min="0"
           max="10" 
-          value={error}
+          value={seed}
           onChange={handleSeedChange}
           className="form-control"
         />
