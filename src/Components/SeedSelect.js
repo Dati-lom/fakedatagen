@@ -21,11 +21,6 @@ function SeedSelect({ setReg, setError, error }) {
     setError(sliderValue);
   };
 
-  const handleNumberInputChange = (e) => {
-    const numberInputValue = parseInt(e.target.value);
-    setError(numberInputValue);
-  };
-
   const handleRegionChange = (e) => {
     const region = e.target.value;
     if (region === "EN") {
@@ -85,7 +80,7 @@ function SeedSelect({ setReg, setError, error }) {
           min="0"
           max="10" 
           value={error}
-          onChange={handleNumberInputChange}
+          onChange={handleSeedChange}
           className="form-control"
         />
       </div>
