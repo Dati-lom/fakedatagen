@@ -53,14 +53,14 @@ function SeedSelect({ setReg, setError, error }) {
           </select>
         </div>
       </div>
-      <div className="col-md-2">
+      <div className="col-md-4">
         <input
           type="range"
           min="0"
-          max="10"
+          max="1000"
           step="0.1"
           value={error}
-          onChange={handleSliderChange}
+          onChange = {handleSliderChange}
           className="form-range"
         />
       </div>
