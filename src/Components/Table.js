@@ -28,7 +28,7 @@ function Table() {
     if(users.length > 0){
       const newUsers = [...users.map((e)=> CreateError(error,e,faker,reg))]
       setVisibleUsers(newUsers);
-      console.log(visibleUsers)
+      
     }
     
 },[error,seed])
